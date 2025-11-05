@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,9 +12,32 @@ public class PlayerController : MonoBehaviour
     private bool isJumping = false;
     public float speed = 10;
 
+    public TextMeshProUGUI countText;
+    private int pickup_count = 0;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        pickup_count = 0;
+        SetPickUpCountText();
+        Debug.Log("Obecnie zebrane pickupy: ", countText);
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("PickUp"))
+        {
+            other.gameObject.SetActive(false);
+            pickup_count += 1;
+            Debug.Log("Obecnie zebrane pickupy: " + countText);
+            SetPickUpCountText();
+        }
+    }
+
+    void SetPickUpCountText()
+    {
+        countText.text = "Count: " + pickup_count.ToString();
     }
 
     void OnMove(InputValue movementValue)
