@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 117ac2f8704b7484288b2db33a3094c4, type: 3}
+  m_Name: CharacterClothMaterialsDatabase
+  m_EditorClassIdentifier: 
+  defaultMaterial: {fileID: 2100000, guid: 01f05be780e4e494f9e5edf8aa584ac6, type: 2}
+  materials:
+  - {fileID: 2100000, guid: be1df131c962ef7458f85d23cd3e9135, type: 2}
+  - {fileID: 2100000, guid: 51096d04800bab041b27182e65028e8c, type: 2}
+  - {fileID: 2100000, guid: ac221453a32b5d840ae2d9741623467a, type: 2}
+  - {fileID: 2100000, guid: 19a90b1335ef48649a12a5ff1c37e87b, type: 2}
